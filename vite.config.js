@@ -17,5 +17,11 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     sourcemap: true,
-  }
+  },
+  optimizeDeps: {
+    include: ['react', 'react-dom', 'react-router-dom'],
+  },
+  // Specify the correct entry point
+  root: '.',
+  publicDir: 'public',
 });
