@@ -1,24 +1,18 @@
+
+// Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getAuth, setPersistence, browserLocalPersistence } from "firebase/auth";
-import { getFirestore } from "firebase/firestore";
+import { getAuth } from "firebase/auth";
 
-
+// Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyAJuJ8DKdnn75WgvyXnKV3PJwp4BbwMvCc",
-    authDomain: "trail-f142f.firebaseapp.com",
-    projectId: "trail-f142f",
-    storageBucket: "trail-f142f.firebasestorage.app",
-    messagingSenderId: "472625893135",
-    appId: "1:472625893135:web:0096c358c7589df975f87a",
-    measurementId: "G-8NTM6KGK8J"
+  apiKey: "AIzaSyDummyKeyForTestingPurposes12345",
+  authDomain: "student-admin-portal.firebaseapp.com",
+  projectId: "student-admin-portal",
+  storageBucket: "student-admin-portal.appspot.com",
+  messagingSenderId: "123456789012",
+  appId: "1:123456789012:web:abcdef1234567890abcdef"
 };
 
+// Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
-const db = getFirestore(app);
-
-
-// Ensure user session persists
-setPersistence(auth, browserLocalPersistence);
-
-export { db, auth };
+export const auth = getAuth(app);
